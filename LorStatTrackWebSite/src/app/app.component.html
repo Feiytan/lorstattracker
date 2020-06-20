@@ -1,0 +1,17 @@
+<h1>Welcome to LOR StatTracker</h1>
+<p>connected: {{lor.connected}}</p>
+<p>{{lor.gameState.GameState}}</p>
+
+<div class="deck" *ngFor="let userDeck of userData.userDecks">
+    <input type="text" [(ngModel)]="userDeck.name">
+    <div>
+        <span class="wins">{{userDeck.wins}}</span>
+        <span> / </span>
+        <span class="looses">{{userDeck.looses}}</span>
+    </div>
+    <div>
+        {{userDeck.wins / (userDeck.wins + userDeck.looses) * 100}}%
+    </div>
+</div>
+<button (click)="saveName()">Save Names</button>
+
