@@ -27,7 +27,7 @@
                 "content.js"
             ],
             "matches": [
-                "https://lorstattracker.web.app/*"
+                "https://lorstattracker.web.app/*", "http://localhost:4200/*"
             ]
         }
     ]
