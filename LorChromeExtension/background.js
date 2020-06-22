@@ -23,7 +23,7 @@ function toogleConnection() {
 }
 
 function sendMessageToWebSite(message) {
-    chrome.tabs.query({ url: 'http://localhost:4200/*' }, tabs => {
+    chrome.tabs.query({ url: ['https://lorstattracker.web.app/*'] }, tabs => {
         tabs.forEach(tab => {
             console.log(tab);
             chrome.tabs.sendMessage(tab.id, message);

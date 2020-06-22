@@ -2,21 +2,33 @@
     "manifest_version": 2,
     "name": "LOR StatTracker",
     "version": "1.0",
-    "description": "An extension to track you games of Legends Of Runeterra.",
+    "description": "An extension to track your games of Legends Of Runeterra.",
     "browser_action": {
         "default_popup": "popup/index.html"
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
     },
     "permissions": [
         "http://127.0.0.1:21337/*",
         "tabs"
     ],
     "background": {
-        "scripts": ["background.js"],
+        "scripts": [
+            "background.js"
+        ],
         "persistant": false
     },
     "content_scripts": [
-    {
-        "js": ["content.js"],
-        "matches": ["http://localhost:4200/*"]
-    }]
+        {
+            "js": [
+                "content.js"
+            ],
+            "matches": [
+                "https://lorstattracker.web.app/*"
+            ]
+        }
+    ]
 }
