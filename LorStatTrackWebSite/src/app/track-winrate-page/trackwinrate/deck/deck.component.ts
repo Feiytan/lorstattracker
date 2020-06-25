@@ -35,7 +35,7 @@ export class DeckComponent implements OnInit, AfterViewInit, OnChanges{
   }
 
   private renderImage() {
-        this.renderer.setStyle(this.deckElement.nativeElement, 'background-image', 'url(\'http://dd.b.pvp.net/1_0_0/set' + this.deck.deckImage.code[1] + '/en_us/img/cards/' + this.deck.deckImage.code + '-full.png\')');
+        this.renderer.setStyle(this.deckElement.nativeElement, 'background-image', 'url(\'https://dd.b.pvp.net/1_0_0/set' + this.deck.deckImage.code[1] + '/en_us/img/cards/' + this.deck.deckImage.code + '-full.png\')');
         this.renderer.setStyle(this.deckElement.nativeElement, 'width', this.width + 'px');
         this.renderer.setStyle(this.deckElement.nativeElement, 'height', this.height + 'px');
   }
