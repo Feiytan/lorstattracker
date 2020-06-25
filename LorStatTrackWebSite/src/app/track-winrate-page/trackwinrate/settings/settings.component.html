@@ -1,0 +1,33 @@
+<div #setting>
+    <div class="settingContainer">
+        <div class="line">
+            <mat-form-field>
+                <mat-label>Deck Name</mat-label>
+                <input [(ngModel)]="deck.name" matInput>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Select image for the deck</mat-label>
+                <mat-select [(ngModel)]="deck.deckImage.code">
+                  <mat-option *ngFor="let d of deck.cardsInDeck" [value]="d.code">{{d.code}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="line">
+            <mat-form-field>
+                <mat-label>Wins</mat-label>
+                <input [(ngModel)]="deck.wins" matInput type="number">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Looses</mat-label>
+                <input [(ngModel)]="deck.looses" matInput type="number">
+            </mat-form-field>
+        </div>
+        <div class="line">
+            <mat-form-field>
+                <mat-label>Deck Code</mat-label>
+                <input [(ngModel)]="deck.deckCode" matInput class="deckCode">
+            </mat-form-field>
+            <button mat-raised-button color="warn" (click)="deleteDeck()"><mat-icon class="deleteIcon">delete</mat-icon>Delete</button>
+        </div>
+    </div>
+</div>

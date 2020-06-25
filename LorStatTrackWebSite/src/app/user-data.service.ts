@@ -25,7 +25,7 @@ export class UserDataService {
   }
 
   public addWin(deck: Deck) {
-    let winnerDeck = this.userDecks.find(d => d.DeckCode === deck.DeckCode);
+    let winnerDeck = this.userDecks.find(d => d.deckCode === deck.DeckCode);
     if(winnerDeck) {
       winnerDeck.wins++;
     } else {
@@ -37,7 +37,7 @@ export class UserDataService {
   }
 
   public addLoose(deck: Deck) {
-    let looserDeck = this.userDecks.find((d: UserDeck) => d.DeckCode === deck.DeckCode);
+    let looserDeck = this.userDecks.find((d: UserDeck) => d.deckCode === deck.DeckCode);
     if(looserDeck) {
       looserDeck.looses++;
     } else {

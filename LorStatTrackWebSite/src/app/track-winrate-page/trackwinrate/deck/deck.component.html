@@ -1,0 +1,17 @@
+<div class="deck" #deckRef>
+    <div class="title">
+        <h2 class="deckTitle shadow">{{deck.name}}</h2>
+    </div>
+    <div class="results">
+        <div class="wins res shadow">
+            {{deck.wins}}W
+        </div>
+        <div class="looses res shadow">
+            {{deck.looses}}L
+        </div>
+        <div class="res shadow" [ngClass]="{'positiveWinrate' : deck.wins >= deck.looses, 'negativeWinrate': deck.looses > deck.wins}">
+            {{deck.wins / (deck.wins + deck.looses) * 100 | number:'1.2-2'}}%
+        </div>
+    </div>
+</div>
+

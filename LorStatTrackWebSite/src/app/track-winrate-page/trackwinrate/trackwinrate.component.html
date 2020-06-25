@@ -1,0 +1,12 @@
+<div class="container">
+    <app-deck *ngIf="!isSetting; else settingBlock" [deck]="userDeck" [height]="height" [width]="width"></app-deck>
+    <ng-template #settingBlock>
+        <app-settings  [deck]="userDeck" [height]="height" [width]="width"></app-settings>
+    </ng-template>
+    <div class="settingButton" (click)="toogleSetting()">
+        <mat-icon *ngIf="!isSetting; else validSettings" class="icon editIcon">edit</mat-icon>
+        <ng-template #validSettings>
+            <mat-icon class="icon validateIcon">done</mat-icon>
+        </ng-template>
+    </div>
+</div>
